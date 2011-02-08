@@ -1,0 +1,39 @@
+
+jq-form-datasafety v0.1
+-----------------------
+
+The standard way to prevent users accidentally navigating away from a page
+before they've submitted a form with unsaved data, is to use:
+
+  window.onbeforeunload = "Warning message";
+
+This snippet of code enhances that technique with the following features:
+
+* Checks if form values have changed values versus their initial state and
+  only fires the warning in that case.
+
+* Adds a CSS class ("data_safety_warning") to input boxes which changed
+
+* Only operates on forms tagged with a CSS class called "datasafe", and only
+  on forms and inputs which are visible.
+
+* Works OK with AJAX forms, by inserting itself as the first event handler
+  to fire on form submit.
+
+
+
+Requirements
+------------
+
+* jQuery 1.4 (may work in 1.3)
+
+* Tested in Firefox 3.6, IE7
+
+
+
+Contact the author
+------------------
+
+Andrew Snow <andrew@modulus.org>
+Andys^ on irc.freenode.net
+@andy_snow on the twitter
